@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Bungee Spice', sans-serif;
+      }
+      h1 {
+        margin: 10px;
+        color: bisque;
+      }
+      .loader {
+        height: 30vh;
+        position: relative;
+        left: -80px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      @keyframes outer {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .outer {
+        width: 150px;
+        height: 150px;
+        border-left: 5px solid #38ff8e;
+        border-radius: 50%;
+        position: absolute;
+        animation: outer 1s linear infinite;
+      }
+      @keyframes middle {
+        from {
+          transform: rotate(-180deg);
+        }
+        to {
+          transform: rotate(180deg);
+        }
+      }
+      .middle {
+        width: 125px;
+        height: 125px;
+        border-left: 4px solid rgb(253, 253, 170);
+        border-radius: 50%;
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        animation: middle 1s linear infinite;
+      }
+      @keyframes inner {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .inner {
+        width: 100px;
+        height: 100px;
+        border-left: 3px solid rgb(255, 91, 91);
+        border-radius: 50%;
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        animation: inner 1s linear infinite;
+      }
+
+      /* Hamburger */
+      .hamburger {
+        height: 40vh;
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 0px;
+      }
+      .line1{
+        height: 10px;
+        width: 75px;
+        background-color: #29B1A5;
+        border-radius: 3px;
+        box-shadow: 0 0 10px #29B1A5;
+        position: absolute;
+        right: 35%;
+        top: 80px;
+      }
+      .line2{
+        height: 10px;
+        width: 75px;
+        background-color: #29B1A5;
+        border-radius: 3px;
+        box-shadow: 0 0 10px #29B1A5;
+        position: absolute;
+        right: 35%;
+        top: 105px;
+      }
+      .line3{
+        height: 10px;
+        width: 75px;
+        background-color: #29B1A5;
+        border-radius: 3px;
+        box-shadow: 0 0 10px #29B1A5;
+        position: absolute;
+        right: 35%;
+        top: 130px;
+      }
+      .hamburger:active .line1 {
+      transform: translateY(6px) rotate(45deg);
+    }
+      .hamburger:active .line2 {
+        opacity: 0;
+    }
+      .hamburger:active .line3 {
+      transform: translateY(-43px) rotate(-45deg);
+    }
+
+    </style>
+  </head>
+  <body>
+    <h1>Sppiner-Loader</h1>
+    <div class="loader">
+      <div class="outer"></div>
+      <div class="middle"></div>
+      <div class="inner"></div>
+    </div>
+
+    <div class="hamburger">
+      <h1>hamburger</h1>
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </body>
+</html>
